@@ -1,6 +1,6 @@
 # LoginControlPro for cPanel/WHM
 
-**LoginControlPro** is a security plugin for WHM that disables direct cPanel logins for selected users. It allows only secure logins via WHMCS (SSO/session), and includes time-based restrictions, logging, and email notifications.
+**LoginControlPro** is a WHM plugin developed by **Shahid Malla** to enhance cPanel login security.
 
 ---
 
@@ -22,3 +22,43 @@
 
 ```bash
 bash install_logincontrolpro.sh
+```
+
+3. Go to **WHM > Plugins > LoginControlPro**
+4. Select users, set time restrictions, and save settings.
+
+---
+
+## File Structure
+
+```
+/usr/local/cpanel/logincontrolpro/
+├── config.json                  # User login control config
+├── hooks/
+│   └── block_direct_login.pl    # Hook to block login & send alerts
+├── logs/
+│   └── login_attempts.log       # Log of blocked attempts
+├── whm/
+│   └── index.php                # WHM GUI for managing users
+├── install_logincontrolpro.sh   # Auto-installer script
+```
+
+---
+
+## Developer Info
+
+- **Author:** Shahid Malla  
+- **Email:** life@shahidmalla.dev  
+- **Website:** [shahidmalla.dev](https://shahidmalla.dev) | [shahidmalla.com](https://shahidmalla.com)
+
+---
+
+## License
+
+Open-source plugin developed by Shahid Malla to enhance cPanel login security.
+
+---
+
+## Contributions
+
+Feel free to contribute or suggest improvements by emailing **life@shahidmalla.dev**

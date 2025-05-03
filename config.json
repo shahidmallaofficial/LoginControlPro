@@ -1,0 +1,8 @@
+{
+    "disabled_users": {
+        "demo_user": {
+            "status": true,
+            "schedule": "22:00-06:00"
+        }
+    }
+}
