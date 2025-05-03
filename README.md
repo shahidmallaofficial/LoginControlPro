@@ -1,64 +1,33 @@
-# LoginControlPro for cPanel/WHM
+# LoginControlPro for WHM/cPanel
 
-**LoginControlPro** is a WHM plugin developed by **Shahid Malla** to enhance cPanel login security.
-
----
-
-## Features
-
-- Disable direct login (port 2083) per cPanel user
-- Allow only WHMCS SSO-based login
-- Bulk enable/disable from WHM GUI
-- Set login restrictions based on time (e.g., block from 10PM–6AM)
-- Log all blocked login attempts
-- Email admin when a blocked attempt is made
+**LoginControlPro** is a security plugin for cPanel/WHM that lets you disable direct cPanel logins (via :2083) for specific users. Only WHMCS-based SSO/session logins are allowed for them. This plugin is perfect for enhancing control panel security and preventing brute-force attacks.
 
 ---
 
-## Installation
+### Features
 
-1. Upload `logincontrolpro_complete_alerts.tar.gz` and `install_logincontrolpro.sh` to your server.
-2. Run the installer:
+- Block direct cPanel logins (username/password)
+- Allow only WHMCS SSO/session-based login
+- Bulk user selection from WHM interface
+- Set time-based restrictions (e.g., disable login from 10PM–6AM)
+- Logs all blocked login attempts
+- Sends email notifications to admin when a login is blocked
+- Full WHM GUI for managing users and login settings
+- One-command installer from GitHub
 
+---
+
+### Developed By
+
+- **Author**: [Shahid Malla](https://shahidmalla.dev)  
+- **Email**: [life@shahidmalla.dev](mailto:life@shahidmalla.dev)  
+- **Websites**: [shahidmalla.dev](https://shahidmalla.dev) | [shahidmalla.com](https://shahidmalla.com)
+
+---
+
+### Installation
+
+#### Option 1: Quick Install (recommended)
 ```bash
-bash install_logincontrolpro.sh
-```
-
-3. Go to **WHM > Plugins > LoginControlPro**
-4. Select users, set time restrictions, and save settings.
-
----
-
-## File Structure
-
-```
-/usr/local/cpanel/logincontrolpro/
-├── config.json                  # User login control config
-├── hooks/
-│   └── block_direct_login.pl    # Hook to block login & send alerts
-├── logs/
-│   └── login_attempts.log       # Log of blocked attempts
-├── whm/
-│   └── index.php                # WHM GUI for managing users
-├── install_logincontrolpro.sh   # Auto-installer script
-```
-
----
-
-## Developer Info
-
-- **Author:** Shahid Malla  
-- **Email:** life@shahidmalla.dev  
-- **Website:** [shahidmalla.dev](https://shahidmalla.dev) | [shahidmalla.com](https://shahidmalla.com)
-
----
-
-## License
-
-Open-source plugin developed by Shahid Malla to enhance cPanel login security.
-
----
-
-## Contributions
-
-Feel free to contribute or suggest improvements by emailing **life@shahidmalla.dev**
+curl -O https://raw.githubusercontent.com/shahidmallaofficial/LoginControlPro/main/install_from_github.sh
+bash install_from_github.sh
