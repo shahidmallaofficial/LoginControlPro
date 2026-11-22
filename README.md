@@ -19,9 +19,9 @@
 
 ### Developed By
 
-- **Author**: [Shahid Malla](https://shahidmalla.dev)  
+- **Author**: [Shahid Malla](https://shahidmalla.com)  
 - **Email**: [life@shahidmalla.dev](mailto:life@shahidmalla.dev)  
-- **Websites**: [shahidmalla.dev](https://shahidmalla.dev) | [shahidmalla.com](https://shahidmalla.com)
+- **Website**: [shahidmalla.com](https://shahidmalla.com)
 
 ---
 
